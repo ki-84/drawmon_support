@@ -1,0 +1,19 @@
+name: ご意見・ご要望
+description: Drawmonへのアイデアを届ける
+title: "[要望] "
+body:
+  - type: markdown
+    attributes:
+      value: "投稿内容は公開されます。個人情報は記載しないでください。"
+  - type: textarea
+    id: idea
+    attributes:
+      label: ご意見・ご要望
+      description: どんな機能や改善があるとよいか教えてください。
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: どんなときに役立ちますか？
+      description: 使いたい場面や、今困っていることがあれば教えてください。

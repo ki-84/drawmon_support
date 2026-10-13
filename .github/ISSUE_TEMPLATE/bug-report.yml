@@ -1,0 +1,35 @@
+name: 不具合の報告
+description: Drawmonで起きた不具合を報告する
+title: "[不具合] "
+body:
+  - type: markdown
+    attributes:
+      value: "投稿内容は公開されます。メールアドレス・本名などの個人情報は記載しないでください。"
+  - type: textarea
+    id: problem
+    attributes:
+      label: 起きたこと
+      description: 実際の動きと、期待していた動きを教えてください。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 操作の手順
+      description: 不具合が起きるまでの操作と、発生する頻度を教えてください。
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ゲームのバージョン
+      description: わかる場合のみ記入してください。
+  - type: input
+    id: device
+    attributes:
+      label: 端末名・OSのバージョン
+  - type: textarea
+    id: attachments
+    attributes:
+      label: 画像・動画・補足
+      description: 個人情報が映っていないことを確認して添付してください。

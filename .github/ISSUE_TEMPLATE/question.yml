@@ -1,0 +1,17 @@
+name: ご質問
+description: Drawmonについて質問する
+title: "[質問] "
+body:
+  - type: markdown
+    attributes:
+      value: "投稿内容は公開されます。個人情報は記載しないでください。"
+  - type: textarea
+    id: question
+    attributes:
+      label: ご質問の内容
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ゲームのバージョン（任意）

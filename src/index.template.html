@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="__LANG__">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#12182d">
+  <title>{{metaTitle}}</title>
+  <meta name="description" content="{{metaDescription}}">
+  <meta name="site-base" content="__BASE__">
+  <link rel="canonical" href="__CANONICAL__">
+  __ALTERNATES__
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{metaTitle}}">
+  <meta property="og:description" content="{{metaDescription}}">
+  <meta property="og:url" content="__CANONICAL__">
+  <meta property="og:image" content="https://ki-84.github.io/drawmon_support/assets/art/hero.webp">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="__BASE__assets/art/icon.png" type="image/png">
+  <link rel="preload" as="image" href="__BASE__assets/art/hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="__BASE__assets/style.css">
+  <script id="page-copy" type="application/json">__COPY_JSON__</script>
+  <script src="__BASE__assets/app.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">{{skip}}</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Drawmon"><img src="__BASE__assets/art/logo.webp" alt="Drawmon" width="180" height="75"></a>
+    <nav aria-label="Drawmon">
+      <a href="#play">{{navPlay}}</a><a href="#world">{{navWorld}}</a><a href="#support">{{navSupport}}</a>
+    </nav>
+    <label class="language-control"><span aria-hidden="true">◎</span><span class="sr-only">{{language}}</span><select id="language">__LANGUAGE_OPTIONS__</select><span aria-hidden="true">⌄</span></label>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-art" src="__BASE__assets/art/hero.webp" alt="" width="1672" height="941" fetchpriority="high">
+      <div class="hero-shade"></div><div class="hero-grain"></div>
+      <div class="hero-inner container">
+        <p class="eyebrow light"><span></span>{{heroKicker}}</p>
+        <h1 id="hero-title">{{heroTitle1}}<br><em>{{heroTitle2}}</em></h1>
+        <p class="hero-lead">{{heroLead}}</p>
+        <div class="hero-actions"><a class="button gold" href="#play">{{tryDemo}} <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="#world">{{seeWorld}} <span aria-hidden="true">↓</span></a></div>
+        <p class="release"><span class="status-dot"></span>{{release}}</p>
+      </div>
+      <div class="hero-stamp"><span>{{stamp1}}</span><strong>{{stamp2}}</strong><i aria-hidden="true">✦</i></div>
+      <div class="hero-bubble">{{heroSpeech}}</div>
+      <p class="art-caption">{{artNote}}</p>
+      <a class="scroll-cue" href="#play"><span>SCROLL TO PLAY</span><i aria-hidden="true">↓</i></a>
+    </section>
+
+    <div class="idea-ribbon" aria-hidden="true"><span>DRAW.</span><i>✦</i><span>THINK.</span><i>✦</i><span>WIN.</span><i>✦</i><span>DRAW.</span><i>✦</i><span>THINK.</span><i>✦</i><span>WIN.</span></div>
+
+    <section class="play-section section-pad" id="play" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="section-heading demo-heading reveal">
+          <div><p class="eyebrow"><span>01</span>{{demoEyebrow}}</p><h2 id="demo-title">{{demoTitle1}}<br><span class="ink-underline">{{demoTitle2}}</span></h2></div>
+          <p>{{demoIntro}}</p>
+        </div>
+        <ol class="play-steps"><li><b>01</b>{{stepLook}}</li><li><b>02</b>{{stepDraw}}</li><li><b>03</b>{{stepEffect}}</li></ol>
+        <div class="battle-demo reveal">
+          <div class="battle-topbar"><div class="floor-switch" role="group" aria-label="{{stepLook}}"><button class="active" data-floor="1" aria-pressed="true">{{floorOne}}</button><button data-floor="2" aria-pressed="false">{{floorTwo}}</button></div><span class="tiny-label">DRAW. THINK. WIN.</span></div>
+          <div class="battle-layout">
+            <aside class="idea-picker"><p class="picker-title">{{chooseIdea}}</p>
+              <button class="idea-card active" data-idea="water" aria-pressed="true"><img src="__BASE__assets/art/doodle-water.svg" alt="" width="120" height="120"><span><strong>{{waterName}}</strong><small>{{waterDetail}}</small></span><i aria-hidden="true">✓</i></button>
+              <button class="idea-card" data-idea="sponge" aria-pressed="false"><img src="__BASE__assets/art/doodle-sponge.svg" alt="" width="120" height="120"><span><strong>{{spongeName}}</strong><small>{{spongeDetail}}</small></span><i aria-hidden="true">✓</i></button>
+              <p class="pencil-note">{{loopLabel}}</p>
+            </aside>
+            <div class="battle-stage" id="battle-stage">
+              <div class="stage-vignette"></div>
+              <span class="stage-floor" id="stage-floor">01F</span>
+              <div class="enemy-bubble" id="enemy-bubble">{{enemyReady}}</div>
+              <div class="doodle-fighter"><span class="fighter-caption">{{doodleLabel}}</span><img id="doodle-fighter" src="__BASE__assets/art/doodle-water.svg" alt="{{waterName}}" width="320" height="320"></div>
+              <div class="guardian-fighter"><span class="fighter-caption">{{enemyLabel}}</span><img id="guardian-fighter" src="__BASE__assets/art/enemy-flame.webp" alt="{{floorOne}}" width="320" height="320"><span class="steam" aria-hidden="true">〰</span></div>
+              <div class="splash" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><span>✦</span></div>
+              <div class="battle-impact" id="battle-impact" aria-hidden="true"></div>
+              <div class="stage-footer"><span>YOUR IDEA</span><span aria-hidden="true">VS</span><span>THE GUARDIAN</span></div>
+            </div>
+          </div>
+          <div class="battle-bottom"><div class="battle-result" aria-live="polite" aria-atomic="true"><p class="result-tag" id="result-tag">READY?</p><p id="result-copy">{{demoInitial}}</p></div><button class="button ink" id="demo-run">{{demoRun}} <span aria-hidden="true">→</span></button></div>
+        </div>
+        <p class="demo-caption">{{demoCaption}}</p>
+        <div class="contrast-note reveal"><span class="contrast-mark" aria-hidden="true">!?</span><div><h3>{{contrastTitle}}</h3><p>{{contrastBody}}</p></div><span class="scribble-arrow" aria-hidden="true">↗</span></div>
+      </div>
+    </section>
+
+    <section class="world-section section-pad" id="world" aria-labelledby="world-title">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="eyebrow light"><span>02</span>{{worldEyebrow}}</p><h2 id="world-title">{{worldTitle1}}<br><em>{{worldTitle2}}</em></h2></div><p>{{worldBody}}</p></div>
+        <div class="world-gallery">
+          <figure class="world-card reveal"><img src="__BASE__assets/art/region1.webp" loading="lazy" alt="{{region1}}" width="720" height="480"><figcaption><small>01—10F</small><h3>{{region1}}</h3></figcaption></figure>
+          <figure class="world-card reveal"><img src="__BASE__assets/art/region2.webp" loading="lazy" alt="{{region2}}" width="720" height="480"><figcaption><small>11—20F</small><h3>{{region2}}</h3></figcaption></figure>
+          <figure class="world-card reveal"><img src="__BASE__assets/art/region3.webp" loading="lazy" alt="{{region3}}" width="720" height="480"><figcaption><small>21—30F</small><h3>{{region3}}</h3></figcaption></figure>
+          <figure class="world-card reveal"><img src="__BASE__assets/art/region4.webp" loading="lazy" alt="{{region4}}" width="720" height="480"><figcaption><small>31—40F</small><h3>{{region4}}</h3></figcaption></figure>
+          <figure class="world-card reveal"><img src="__BASE__assets/art/region5.webp" loading="lazy" alt="{{region5}}" width="720" height="480"><figcaption><small>41—50F</small><h3>{{region5}}</h3></figcaption></figure>
+        </div>
+        <div class="boss-banner reveal"><div class="boss-orbit" aria-hidden="true">50</div><div class="boss-copy"><p class="eyebrow light">THE FINAL FLOOR</p><h3>{{bossTitle}}</h3><p>{{bossBody}}</p></div><img src="__BASE__assets/art/boss.webp" alt="{{bossTitle}}" width="420" height="420" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="features-section section-pad"><div class="container">
+      <p class="eyebrow"><span>03</span>BEYOND THE BATTLE</p><h2 class="feature-heading reveal">{{featuresTitle}}</h2>
+      <div class="feature-grid">
+        <article class="feature feature-talk reveal"><div class="feature-art"><img src="__BASE__assets/art/enemy-flame-spent.webp" alt="" width="220" height="220" loading="lazy"><span class="mini-bubble">{{heroSpeech}}</span><span class="mini-sparks" aria-hidden="true">! !</span></div><span class="feature-no">01 / REACTION</span><h3>{{feature1Title}}</h3><p>{{feature1Body}}</p></article>
+        <article class="feature feature-sketch reveal"><div class="feature-art"><img class="sketch-first" src="__BASE__assets/art/doodle-water.svg" alt="" width="180" height="180" loading="lazy"><span class="redraw-arrow" aria-hidden="true">↝</span><img class="sketch-second" src="__BASE__assets/art/doodle-sponge.svg" alt="" width="180" height="180" loading="lazy"></div><span class="feature-no">02 / REIMAGINE</span><h3>{{feature2Title}}</h3><p>{{feature2Body}}</p></article>
+        <article class="feature feature-memory reveal"><div class="feature-art"><div class="memory-photo"><img class="memory-hero" src="__BASE__assets/art/hero-character.webp" alt="" width="180" height="260" loading="lazy"><img class="memory-doodle" src="__BASE__assets/art/doodle-water.svg" alt="" width="135" height="135" loading="lazy"><span aria-hidden="true">✦</span></div></div><span class="feature-no">03 / YOUR STORY</span><h3>{{feature3Title}}</h3><p>{{feature3Body}}</p></article>
+      </div>
+    </div></section>
+
+    <section class="draw-section section-pad" id="draw" aria-labelledby="draw-title"><div class="container draw-layout">
+      <div class="draw-copy reveal"><p class="eyebrow light"><span>04</span>{{drawEyebrow}}</p><h2 id="draw-title">{{drawTitle}}</h2><p>{{drawBody}}</p><img class="draw-mascot" src="__BASE__assets/art/doodle-water.svg" width="240" height="240" alt="" loading="lazy"><span class="draw-spark" aria-hidden="true">✦</span></div>
+      <div class="sketchbook reveal"><div class="sketchbook-top"><span>MY NEXT BRILLIANT IDEA</span><span aria-hidden="true">✧</span></div><canvas id="sketch-canvas" width="720" height="600" aria-label="{{canvasLabel}}" tabindex="0"></canvas>
+        <div class="sketchbook-tools"><div class="palette" role="group" aria-label="{{pen}}"><button data-color="#2769d7" class="selected" style="--swatch:#2769d7" aria-label="{{colorBlue}}" aria-pressed="true"></button><button data-color="#e75954" style="--swatch:#e75954" aria-label="{{colorRed}}" aria-pressed="false"></button><button data-color="#edb831" style="--swatch:#edb831" aria-label="{{colorYellow}}" aria-pressed="false"></button><button data-color="#399b72" style="--swatch:#399b72" aria-label="{{colorGreen}}" aria-pressed="false"></button><button data-color="#242b42" style="--swatch:#242b42" aria-label="{{colorInk}}" aria-pressed="false"></button></div><button class="tool-button" id="eraser" aria-pressed="false">{{eraser}}</button></div>
+        <div class="sketchbook-actions"><button class="text-button" id="undo">↶ {{undo}}</button><button class="text-button" id="clear">{{clear}}</button><button class="button ink small" id="save">{{save}} <span aria-hidden="true">↓</span></button></div>
+        <p class="canvas-status" id="canvas-status" role="status"></p>
+      </div><p class="canvas-note">{{canvasNote}}</p>
+    </div></section>
+
+    <section class="faq-section section-pad" aria-labelledby="faq-title"><div class="container faq-layout"><div><p class="eyebrow">QUESTIONS & ANSWERS</p><h2 id="faq-title">{{aboutTitle}}</h2><p class="release dark"><span class="status-dot"></span>{{release}}</p></div><div class="faq-list">
+      <details><summary>{{faq1}}<span aria-hidden="true">+</span></summary><p>{{answer1}}</p></details>
+      <details><summary>{{faq2}}<span aria-hidden="true">+</span></summary><p>{{answer2}}</p></details>
+      <details><summary>{{faq3}}<span aria-hidden="true">+</span></summary><p>{{answer3}}</p></details>
+      <details><summary>{{faq4}}<span aria-hidden="true">+</span></summary><p>{{answer4}}</p></details>
+      <details><summary>{{faq5}}<span aria-hidden="true">+</span></summary><p>{{answer5}}</p></details>
+      <details><summary>{{faq6}}<span aria-hidden="true">+</span></summary><p>{{answer6}}</p></details>
+    </div></div></section>
+
+    <section class="support-section" id="support"><div id="contact" class="container support-inner"><div><p class="eyebrow light">DRAWMON SUPPORT</p><h2>{{supportTitle}}</h2><p>{{supportBody}}</p></div><div class="support-actions"><a href="https://github.com/ki-84/drawmon_support/issues/new?template=bug-report.yml">{{supportBug}} <span aria-hidden="true">↗</span></a><a href="https://github.com/ki-84/drawmon_support/issues/new?template=feature-request.yml">{{supportIdea}} <span aria-hidden="true">↗</span></a><a href="https://github.com/ki-84/drawmon_support/issues/new?template=question.yml">{{supportQuestion}} <span aria-hidden="true">↗</span></a></div><p class="support-guide">{{supportGuide}}</p><p class="support-note">{{supportNote}}</p></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><a class="footer-logo" href="#top"><img src="__BASE__assets/art/logo.webp" alt="Drawmon" width="200" height="84" loading="lazy"></a><p class="footer-line">{{footerLine}}</p><div class="footer-bottom"><span>© 2026 ki-84 · #DrawMon</span><a href="https://github.com/ki-84/drawmon_support/issues">{{allIssues}} ↗</a><a href="#top">{{top}} ↑</a></div><p class="footer-note">{{footerNote}}</p></div></footer>
+</body>
+</html>

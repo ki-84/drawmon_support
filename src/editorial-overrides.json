@@ -1,0 +1,102 @@
+{
+  "ko": {
+    "heroTitle1": "내가 그린 몬스터,",
+    "heroTitle2": "승리를 그리다.",
+    "stamp1": "그림 실력보다",
+    "stamp2": "반짝이는 아이디어!",
+    "answer5": "이 웹사이트는 16가지 언어와 표기로 제공됩니다. 앱의 기본 지원 언어는 일본어와 영어이며, 14가지 추가 언어는 개발용 미리보기로 준비 중입니다."
+  },
+  "zh-Hans": {
+    "heroTitle1": "画出你的怪兽，",
+    "heroTitle2": "赢下这一战。",
+    "stamp1": "不必画得完美，",
+    "stamp2": "有妙招就行！",
+    "answer5": "本网站提供16种语言及文字版本。应用目前可正常选择日语和英语，另外14种设置仍处于开发预览阶段。"
+  },
+  "zh-Hant": {
+    "heroTitle1": "畫出你的怪獸，",
+    "heroTitle2": "贏下這一戰。",
+    "stamp1": "不必畫得完美，",
+    "stamp2": "有妙招就行！",
+    "answer5": "本網站提供16種語言及文字版本。App目前可正常選擇日語和英語，另外14種設定仍處於開發預覽階段。"
+  },
+  "es": {
+    "heroTitle1": "Tu dibujo.",
+    "heroTitle2": "Tu gran jugada.",
+    "stamp1": "Grandes ideas.",
+    "stamp2": "¡No hace falta dibujar perfecto!",
+    "answer5": "Este sitio ofrece 16 versiones de idioma y escritura. La app permite elegir japonés e inglés. Las otras 14 opciones siguen en desarrollo como vistas previas."
+  },
+  "fr": {
+    "heroTitle1": "Ton dessin.",
+    "heroTitle2": "Ton coup gagnant.",
+    "stamp1": "Place aux idées.",
+    "stamp2": "Les gribouillis sont les bienvenus !",
+    "answer5": "Ce site propose 16 versions linguistiques. L’application permet de choisir le japonais ou l’anglais. Les 14 autres versions sont en cours de développement et disponibles en aperçu."
+  },
+  "de": {
+    "heroTitle1": "Deine Zeichnung.",
+    "heroTitle2": "Dein cleverer Zug.",
+    "stamp1": "Große Ideen.",
+    "stamp2": "Krumme Linien willkommen!",
+    "answer5": "Diese Website bietet 16 Sprach- und Schriftvarianten. In der App sind Japanisch und Englisch regulär auswählbar. Die 14 weiteren Varianten werden als Vorschau entwickelt."
+  },
+  "pt": {
+    "heroTitle1": "Seu desenho.",
+    "heroTitle2": "Sua jogada genial.",
+    "stamp1": "Grandes ideias.",
+    "stamp2": "Rabiscos são bem-vindos!",
+    "answer5": "Este site oferece 16 versões de idioma e escrita. No aplicativo, as opções normais são japonês e inglês. As outras 14 opções estão em desenvolvimento como prévias."
+  },
+  "it": {
+    "heroTitle1": "Il tuo disegno.",
+    "heroTitle2": "La tua mossa geniale.",
+    "stamp1": "Grandi idee.",
+    "stamp2": "Benvenuti, scarabocchi!",
+    "answer5": "Questo sito offre 16 versioni linguistiche. Nell’app si possono scegliere normalmente il giapponese e l’inglese. Le altre 14 versioni sono in sviluppo come anteprime."
+  },
+  "vi": {
+    "heroTitle1": "Nét vẽ của bạn.",
+    "heroTitle2": "Ý tưởng để chiến thắng.",
+    "stamp1": "Ý tưởng thật hay.",
+    "stamp2": "Nét vẽ nguệch ngoạc cũng được!",
+    "answer5": "Trang web này có 16 phiên bản ngôn ngữ và chữ viết. Ứng dụng hiện cho phép chọn tiếng Nhật và tiếng Anh. 14 tùy chọn khác đang được phát triển dưới dạng bản xem trước."
+  },
+  "tr": {
+    "heroTitle1": "Senin çizimin.",
+    "heroTitle2": "Kazandıran fikrin.",
+    "stamp1": "Büyük fikirler.",
+    "stamp2": "Eğri çizgiler de olur!",
+    "answer5": "Bu site 16 dil ve yazı seçeneği sunar. Uygulamada normal olarak Japonca ve İngilizce seçilebilir. Diğer 14 seçenek önizleme olarak geliştirilmektedir."
+  },
+  "nl": {
+    "heroTitle1": "Jouw tekening.",
+    "heroTitle2": "Jouw slimme zet.",
+    "stamp1": "Grootse ideeën.",
+    "stamp2": "Kromme lijnen zijn welkom!",
+    "answer5": "Deze website biedt 16 taal- en schriftvarianten. In de app zijn Japans en Engels normaal beschikbaar. De 14 overige varianten worden als voorvertoning ontwikkeld."
+  },
+  "sv": {
+    "heroTitle1": "Din teckning.",
+    "heroTitle2": "Ditt smarta drag.",
+    "stamp1": "Stora idéer.",
+    "stamp2": "Skeva streck är välkomna!",
+    "answer5": "Den här webbplatsen finns i 16 språk- och skriftvarianter. I appen kan du normalt välja japanska eller engelska. De övriga 14 alternativen utvecklas som förhandsversioner."
+  },
+  "da": {
+    "heroTitle1": "Din tegning.",
+    "heroTitle2": "Dit geniale træk.",
+    "stamp1": "Store idéer.",
+    "stamp2": "Skæve streger er velkomne!",
+    "answer5": "Denne hjemmeside har 16 sprog- og skriftvarianter. I appen kan du normalt vælge japansk eller engelsk. De øvrige 14 varianter udvikles som forhåndsvisninger."
+  },
+  "nb": {
+    "heroTitle1": "Din tegning.",
+    "heroTitle2": "Ditt smarte trekk.",
+    "stamp1": "Store ideer.",
+    "stamp2": "Skjeve streker er velkomne!",
+    "waterName": "Vannmonster",
+    "spongeName": "Svampmonster",
+    "answer5": "Dette nettstedet har 16 språk- og skriftvarianter. I appen kan du normalt velge japansk eller engelsk. De øvrige 14 variantene utvikles som forhåndsvisninger."
+  }
+}

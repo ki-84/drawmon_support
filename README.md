@@ -1,32 +1,48 @@
-# Drawmon サポートページ
+# Drawmon — 描いた絵で、勝てる。
 
-ゲーム「Drawmon」の日本語サポートページ。静的HTMLとCSSで構成し、GitHub Pagesで公開します。
+Drawmonの公式プロモーション・サポートサイト。公開先は **https://ki-84.github.io/drawmon_support/** です。
 
-公開URL: https://ki-84.github.io/drawmon_support/
+HTML・CSS・JavaScript・画像のみの静的サイトなので、GitHub Pagesで動作します。実行サーバー、APIキー、外部CDN、アクセス解析は不要です。
 
 ## 内容
 
-- 不具合・要望・質問の受付（GitHub Issues）
-- 不具合報告に必要な情報の案内
-- お問い合わせに関するFAQ
-- スマートフォン対応・キーボード操作対応
+- 手描きの水モンスターが炎の守護者を驚かせるキャンペーンビジュアル
+- 水が炎を消す1階／水では止まらない2階の攻略デモと、次の工夫のヒント
+- 現行アプリの5エリア・50階・最終守護者の紹介
+- 端末内だけで描けるスケッチブック（色、消しゴム、元に戻す、消去、PNG保存）
+- FAQ、既存のGitHub Issues受付（不具合・要望・質問）
+- 16言語・表記の静的ページ、言語切替、canonical、hreflang、サイトマップ
 
-ゲーム本体が未登録のため、遊び方・対応OS・課金・データの保存方式・プライバシーポリシーは記載していません。正式な仕様を確認してから追加してください。
+日本語、英語、韓国語、簡体字中国語、繁体字中国語、スペイン語、フランス語、ドイツ語、ポルトガル語、イタリア語、ベトナム語、トルコ語、オランダ語、スウェーデン語、デンマーク語、ノルウェー語ブークモールに対応します。追加14設定はApple Translationによる翻訳を起点にした文案です。公開後も母語話者による表現の確認を続けてください。
 
-## 編集と公開
+サイトの16言語と、アプリの通常選択（日本語・英語）／追加14設定の開発用プレビューを区別して記載しています。アプリは配信準備中で、未確定のApp Storeリンクや価格は掲載していません。
 
-ページは `docs/index.html`、デザインは `docs/assets/style.css` を編集します。受付フォームは `.github/ISSUE_TEMPLATE/` にあります。問い合わせ先を変更する場合は、ページ内の各リンクとGitHub Issuesの案内文を更新してください。
+## 編集
 
-`main` に `docs/` または公開ワークフローの変更をpushすると、GitHub Actionsが自動で公開します。公開対象は `docs/` のみで、READMEや受付フォームは含みません。
+- `src/index.template.html`: 共通HTML
+- `src/base-copy.json`: 日本語・英語の元文案
+- `src/locales/*.json`: 言語別本文（113項目）
+- `src/editorial-overrides.json`: 追加14設定の見出し・用語などの推敲（翻訳の再生成後も維持）
+- `docs/assets/style.css`, `app.js`: デザインとブラウザー内の操作
+- `docs/assets/art/`: 最適化済み素材
+- `src/ART_DIRECTION.md`: 生成画像の最終プロンプト、保存先、素材の出典
+- `.github/ISSUE_TEMPLATE/`: 既存の受付フォーム
 
-GitHubの **Settings → Pages → Build and deployment → Source** は **GitHub Actions** を選択します。公開状況は **Actions** の `Deploy support site to GitHub Pages` で確認できます。
-
-GitHub Pages公開設定について: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
-
-## ローカル確認
+ローカライズ済みHTMLは`docs/`に生成してコミットします。公開物は`docs/`だけです。
 
 ```sh
-python3 -m http.server 8000 --directory docs --bind 127.0.0.1
+python3 scripts/build_site.py
+python3 scripts/check_site.py
+node --check docs/assets/app.js
+python3 -m http.server 8173 --directory docs --bind 127.0.0.1
 ```
 
-http://127.0.0.1:8000/ を開きます。ビルドやパッケージのインストールは不要です。
+http://127.0.0.1:8173/ を開きます。`/en/`など各言語の直リンクにも対応します。ビルドにはPython標準ライブラリのみを使い、Node.jsは構文確認時だけ使用します。
+
+日本語・英語は`src/base-copy.json`を修正し、各言語を確認してから生成してください。`scripts/translate_site.py`は隣接するDrawmonアプリのMac用`AppleNativeBenchmark`とApple Translationがある開発環境で、追加14設定の翻訳文案を作るための任意ツールです。公開時には使いません。
+
+## 公開
+
+`main`に`docs/`、`src/`、生成・検証スクリプト、公開ワークフローの変更をpushすると、既存のGitHub Actionsが16ページを再生成・検証してGitHub Pagesへ公開します。PagesのSourceは**GitHub Actions**を使用します。
+
+紹介用デモは決まった例のアニメーションです。自由な絵を判定するAIやゲーム本体は含みません。スケッチは送信・自動保存されず、PNG保存ボタンを押したときだけブラウザーから書き出します。

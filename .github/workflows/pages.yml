@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - 'docs/**'
+      - 'src/**'
+      - 'scripts/build_site.py'
+      - 'scripts/check_site.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -26,6 +29,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Build localized pages
+        run: python3 scripts/build_site.py
+      - name: Check static site
+        run: python3 scripts/check_site.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static site

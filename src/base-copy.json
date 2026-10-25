@@ -450,5 +450,9 @@
   "color14": {
     "ja": "茶",
     "en": "Brown"
+  },
+  "privacyPolicy": {
+    "ja": "プライバシーポリシー",
+    "en": "Privacy Policy"
   }
 }

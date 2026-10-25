@@ -3,6 +3,7 @@
 import html
 import json
 import re
+import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -52,7 +53,9 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(content)
         print(f'{code}: {target.relative_to(ROOT)}')
+    shutil.copyfile(ROOT / 'src/privacy.html', ROOT / 'docs/privacy.html')
     urls = ''.join(f'<url><loc>{page_url(code)}</loc></url>' for code in LANGUAGES)
+    urls += f'<url><loc>{URL}privacy.html</loc></url>'
     (ROOT / 'docs/sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + urls + '</urlset>\n')
     (ROOT / 'docs/robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {URL}sitemap.xml\n')
 

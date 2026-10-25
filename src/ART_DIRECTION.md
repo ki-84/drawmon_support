@@ -1,5 +1,7 @@
 # Promotional artwork
 
+The current large-hero website campaign uses the final desktop/mobile artwork documented in [CAMPAIGN_ART_V5.md](CAMPAIGN_ART_V5.md), including saved paths and the complete ImageGen prompt set. The original campaign assets below remain as an archive.
+
 Generated with the built-in ImageGen tool, 2026-10-25. These are promotional illustrations; the website labels them separately from native gameplay. Original generations remain in the generated-images directory. Web exports preserve the generated composition and use WebP compression.
 
 ## Campaign hero

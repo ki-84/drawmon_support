@@ -23,3 +23,11 @@ The former disconnected battle choices and freehand notebook have been replaced 
 - New and changed marketing copy translated across all 16 settings; native drawing-tool labels reused from the app's localization data.
 
 Japanese and English are authored copy. Additional locale drafts use Apple Translation with editorial overrides; structural checks do not replace native-speaker review.
+
+## Large-hero website campaign
+
+- Two website-specific ImageGen illustrations: 1672×940 desktop and 1086×1448 portrait. The final anatomy edit rests the sketchbook on a ledge, removes the distant supporting hand and brings the drawing arm close to the torso. Hero eye lines point toward the doodle.
+- Portrait artwork selected at 800px and below; 375×812 phone and 768×1024 tablet layouts inspected. Desktop wide layout inspected at the default Chrome viewport. Text stays clear of the faces.
+- All 16 mobile locale pages stay within the viewport. Japanese hero height is 920 CSS pixels; other settings are 980. The illustration begins at 320/380 CSS pixels, showing a large hero in the first screen.
+- Guide character art is enlarged using 1000×914 source exports. Main campaign captions still identify the visuals as promotional illustrations.
+- No browser warnings/errors during the checked layouts. The generated assets and full prompt set are recorded in `CAMPAIGN_ART_V5.md`.

@@ -1,0 +1,108 @@
+/* The campaign illustration leads the eye from the large heroes to their drawing. */
+.hero {
+  min-height: max(850px, 100svh);
+  max-height: none;
+}
+.site-header {
+  background: linear-gradient(#101629df, #1016298a);
+}
+.hero-picture {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.hero .hero-art {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  mask-image: none;
+  animation: none;
+}
+.hero .hero-shade {
+  background: linear-gradient(90deg, #101a32ed 0%, #101a32cb 23%, #101a3230 48%, transparent 65%), linear-gradient(0deg, #10182c55, transparent 30%);
+}
+.hero-inner {
+  padding-top: 180px;
+  padding-bottom: 140px;
+}
+.hero h1 { max-width: 650px; }
+.hero-welcome {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 390px;
+  margin-top: 27px;
+  color: #ffe8ae;
+}
+.hero-welcome > span { font-size: 23px; line-height: 1.4; }
+.hero-welcome p { margin: 0; font-size: 13px; max-width: 340px; line-height: 1.9; }
+.hero .art-caption { padding: 3px 7px; border-radius: 4px; background: #10162985; }
+.hero-coach { align-items: flex-end; margin: 35px -18px 0; }
+.hero-coach > img { width: 330px; max-width: 58%; }
+.hero-coach > div { margin: 0 0 35px -12px; padding: 24px; }
+.hero-coach p:last-child { font-size: 14px; }
+.native-story-copy .native-hero { width: 380px; max-width: 90%; margin-top: 12px; }
+.companion-pair { height: 280px; }
+.companion-pair img { width: 73%; bottom: -20%; }
+.companion-pair img:first-child { left: -15%; }
+.companion-pair img:last-child { right: -13%; }
+@media(max-width:1100px) {
+  .hero-inner { padding-top: 165px; }
+  .hero .hero-art { object-position: 58% center; }
+  .hero-coach { margin-inline: -10px; }
+  .hero-coach > img { width: 245px; max-width: 57%; }
+  .hero-coach > div { padding: 18px; margin-bottom: 17px; }
+  .hero-coach p:last-child { font-size: 12px; }
+}
+@media(max-width:800px) {
+  .hero .hero-art { inset: auto 0 0 auto; width: 64%; height: 770px; object-position: center; mask-image: linear-gradient(to right,transparent,#000 15%),linear-gradient(to bottom,transparent,#000 17%); mask-composite: intersect; }
+  .hero h1 { max-width: 390px; font-size: 65px; }
+  html:not([lang=ja]) .hero h1 { max-width: 390px; font-size: 54px; }
+  .hero-lead { max-width: 310px; }
+  .hero-actions { max-width: 370px; }
+  .hero .hero-shade { background: linear-gradient(90deg,#101a32ef,#101a32bf 32%,#101a3220 62%),linear-gradient(0deg,#10182c55,transparent 30%); }
+  .drawing-brief { grid-template-columns: 1fr; }
+  .hero-coach { display: flex; align-items: flex-end; margin: 10px 0 0; }
+  .hero-coach > img { width: 285px; max-width: 49%; margin: 0; }
+  .hero-coach > div { flex: 1; margin-bottom: 30px; }
+  .native-story-copy .native-hero { width: 280px; }
+  .feature-art.companion-pair { height: 240px; }
+}
+@media(max-width:560px) {
+  .hero { min-height: 920px; }
+  .hero-inner { padding-top: 112px; padding-bottom: 360px; }
+  .hero .eyebrow { margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(43px,12.8vw,64px); margin-bottom: 19px; }
+  .hero-lead { margin-bottom: 21px; }
+  .hero .hero-art {
+    inset: auto 0 0;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center 45%;
+    mask-image: linear-gradient(to bottom, transparent, #000 16%);
+  }
+  .hero .hero-shade { background: linear-gradient(180deg,#10192ff0 0%,#10192fdd 28%,#10192f30 53%,transparent 68%,#10192f38); }
+  .hero-welcome { display: none; }
+  .hero-welcome > span { font-size: 18px; }
+  .hero-welcome p { font-size: 11px; max-width: 250px; line-height: 1.8; }
+  .hero .release { margin-top: 22px; padding: 4px 8px; width: max-content; max-width: 100%; border-radius: 12px; background: #101629b0; color: #e0d8ca; }
+  .hero .scroll-cue { bottom: 15px; }
+  .hero .art-caption { bottom: 13px; }
+  .hero-coach { display: block; margin: 10px 0 0; position: relative; }
+  .hero-coach > img { display: block; width: 260px; max-width: 82%; margin: 0 auto -8px; }
+  .hero-coach > div { padding: 19px 20px; margin: 0; position: relative; }
+  .hero-coach .eyebrow { font-size: 9px; }
+  .hero-coach p:last-child { font-size: 12px; }
+  .native-story-copy .native-hero { width: 280px; max-width: 100%; margin-bottom: -10px; }
+  .feature-art.companion-pair { height: 260px; }
+  html:not([lang=ja]) .hero { min-height: 980px; }
+  html:not([lang=ja]) .hero-inner { padding-bottom: 360px; }
+  html:not([lang=ja]) .hero h1 { font-size: clamp(41px,11.2vw,56px); line-height: 1.1; }
+  html[lang=ko] .hero h1,html[lang^=zh] .hero h1 { font-size: clamp(43px,12vw,58px); line-height: 1.2; }
+}

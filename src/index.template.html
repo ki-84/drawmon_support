@@ -13,13 +13,15 @@
   <meta property="og:title" content="{{metaTitle}}">
   <meta property="og:description" content="{{metaDescription}}">
   <meta property="og:url" content="__CANONICAL__">
-  <meta property="og:image" content="https://ki-84.github.io/drawmon_support/assets/art/hero.webp">
+  <meta property="og:image" content="https://ki-84.github.io/drawmon_support/assets/art/hero-campaign-v5.webp">
   <meta property="og:image:width" content="1672">
-  <meta property="og:image:height" content="941">
+  <meta property="og:image:height" content="940">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="__BASE__assets/art/icon.png" type="image/png">
-  <link rel="preload" as="image" href="__BASE__assets/art/hero.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="__BASE__assets/art/hero-campaign-v5.webp" media="(min-width:801px)" fetchpriority="high">
+  <link rel="preload" as="image" href="__BASE__assets/art/hero-mobile-v5.webp" media="(max-width:800px)" fetchpriority="high">
   <link rel="stylesheet" href="__BASE__assets/style.css?v=2">
+  <link rel="stylesheet" href="__BASE__assets/campaign-v5.css">
   <script id="page-copy" type="application/json">__COPY_JSON__</script>
   <script type="module" src="__BASE__assets/app.js?v=2"></script>
 </head>
@@ -34,7 +36,7 @@
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-art" src="__BASE__assets/art/hero.webp" alt="" width="1672" height="941" fetchpriority="high">
+      <picture class="hero-picture"><source media="(max-width:800px)" srcset="__BASE__assets/art/hero-mobile-v5.webp"><img class="hero-art" src="__BASE__assets/art/hero-campaign-v5.webp" alt="" width="1672" height="940" fetchpriority="high"></picture>
       <div class="hero-shade"></div><div class="hero-grain"></div>
       <div class="hero-inner container">
         <p class="eyebrow light"><span></span>{{heroKicker}}</p>
@@ -42,10 +44,8 @@
         <p class="hero-lead">{{heroLead}}</p>
         <div class="hero-actions"><a class="button gold" href="#play">{{tryDemo}} <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="#world">{{seeWorld}} <span aria-hidden="true">↓</span></a></div>
         <p class="release"><span class="status-dot"></span>{{release}}</p>
-        <div class="hero-welcome"><img src="__BASE__assets/art/hero-character.webp" alt="" width="140" height="128"><p>{{heroWelcome}}</p></div>
+        <div class="hero-welcome"><span aria-hidden="true">✦</span><p>{{heroWelcome}}</p></div>
       </div>
-      <div class="hero-stamp"><span>{{stamp1}}</span><strong>{{stamp2}}</strong><i aria-hidden="true">✦</i></div>
-      <div class="hero-bubble">{{heroSpeech}}</div>
       <p class="art-caption">{{artNote}}</p>
       <a class="scroll-cue" href="#play"><span>SCROLL TO PLAY</span><i aria-hidden="true">↓</i></a>
     </section>
@@ -58,7 +58,7 @@
       <div class="drawing-workshop" id="draw">
         <aside class="drawing-brief">
           <div class="observe-card"><span class="brief-number">01 / LOOK</span><h3>{{floorOne}}</h3><img src="__BASE__assets/art/enemy-flame.webp" alt="{{floorOne}}" width="260" height="260"><p>{{demoInitial}}</p></div>
-          <div class="hero-coach"><img src="__BASE__assets/art/hero-character.webp" width="270" height="247" alt=""><div><p class="eyebrow">{{drawEyebrow}}</p><p>{{drawPrompt}}</p></div></div>
+          <div class="hero-coach"><img src="__BASE__assets/art/hero-male-large.webp" width="270" height="247" alt=""><div><p class="eyebrow">{{drawEyebrow}}</p><p>{{drawPrompt}}</p></div></div>
         </aside>
         <div class="app-drawing-screen">
           <div class="app-drawing-header"><span>01F</span><strong>{{stepDraw}}</strong><span aria-hidden="true">✦</span></div>
@@ -70,11 +70,11 @@
             <div class="editor-palette" role="group" aria-label="{{pen}}"><button data-color="0" style="--swatch:#222034" aria-label="{{color0}}" aria-pressed="false"></button><button data-color="1" style="--swatch:#ffffff" aria-label="{{color1}}" aria-pressed="false"></button><button data-color="2" style="--swatch:#d8dfea" aria-label="{{color2}}" aria-pressed="false"></button><button data-color="3" style="--swatch:#747d95" aria-label="{{color3}}" aria-pressed="false"></button><button data-color="4" style="--swatch:#f26375" aria-label="{{color4}}" aria-pressed="false"></button><button data-color="5" style="--swatch:#ffa65a" aria-label="{{color5}}" aria-pressed="false"></button><button data-color="6" style="--swatch:#ffe478" aria-label="{{color6}}" aria-pressed="false"></button><button data-color="7" style="--swatch:#a8e06e" aria-label="{{color7}}" aria-pressed="false"></button><button data-color="8" style="--swatch:#38b88c" aria-label="{{color8}}" aria-pressed="false"></button><button data-color="9" style="--swatch:#64daea" aria-label="{{color9}}" aria-pressed="false"></button><button data-color="10" style="--swatch:#5095ef" aria-label="{{color10}}" aria-pressed="true"></button><button data-color="11" style="--swatch:#6065c9" aria-label="{{color11}}" aria-pressed="false"></button><button data-color="12" style="--swatch:#a879eb" aria-label="{{color12}}" aria-pressed="false"></button><button data-color="13" style="--swatch:#f49ad1" aria-label="{{color13}}" aria-pressed="false"></button><button data-color="14" style="--swatch:#b67a5e" aria-label="{{color14}}" aria-pressed="false"></button><label class="custom-swatch" title="{{customColor}}"><span aria-hidden="true">☷</span><input type="color" id="custom-color" value="#f4d5b5" aria-label="{{customColor}}"></label></div>
             <div class="editor-tools"><div class="pen-widths" role="group" aria-label="{{pen}}"><button data-width="1" aria-pressed="false"><i style="height:2px"></i>{{thin}}</button><button data-width="2" aria-pressed="true"><i style="height:3px"></i>{{normal}}</button><button data-width="4" aria-pressed="false"><i style="height:6px"></i>{{thick}}</button><button data-width="8" aria-pressed="false"><i style="height:11px"></i>{{extraThick}}</button></div><button id="fill" class="editor-icon" aria-label="{{fill}}" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3 5-7 8-7 12a7 7 0 0 0 14 0c0-4-4-7-7-12Z"/><path d="M8 16c0 2 2 3 3 3"/></svg></button><button id="eraser" class="editor-icon" aria-label="{{eraser}}" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 14 8-10a2 2 0 0 1 3 0l6 5-9 11H8Z"/><path d="m8 9 9 7M12 20h9"/></svg></button><button id="clear" class="editor-icon" aria-label="{{clear}}" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7m4-7v7"/></svg></button></div>
           </div>
-          <div class="editor-hero"><img src="__BASE__assets/art/hero-female.webp" alt="" width="120" height="110"><div><p>{{canvasNote}}</p><button class="app-save" id="save">{{save}} <span aria-hidden="true">↓</span></button></div></div>
+          <div class="editor-hero"><img src="__BASE__assets/art/hero-female-large.webp" alt="" width="120" height="110"><div><p>{{canvasNote}}</p><button class="app-save" id="save">{{save}} <span aria-hidden="true">↓</span></button></div></div>
           <p class="canvas-status" id="canvas-status" role="status"></p><p class="export-size">{{saveSize}}</p>
         </div>
       </div>
-      <div class="native-story reveal"><figure><img src="__BASE__assets/art/app-drawing.webp" alt="{{canvasTitle}}" loading="lazy" width="603" height="1311"><figcaption>{{actualScreen}}</figcaption></figure><div class="native-story-copy"><p class="eyebrow"><span>03</span>{{stepEffect}}</p><h3>{{nativeTitle}}</h3><p>{{nativeBody}}</p><img class="native-hero" src="__BASE__assets/art/hero-female.webp" width="320" height="293" loading="lazy" alt=""></div></div>
+      <div class="native-story reveal"><figure><img src="__BASE__assets/art/app-drawing.webp" alt="{{canvasTitle}}" loading="lazy" width="603" height="1311"><figcaption>{{actualScreen}}</figcaption></figure><div class="native-story-copy"><p class="eyebrow"><span>03</span>{{stepEffect}}</p><h3>{{nativeTitle}}</h3><p>{{nativeBody}}</p><img class="native-hero" src="__BASE__assets/art/hero-female-large.webp" width="320" height="293" loading="lazy" alt=""></div></div>
       <div class="contrast-note reveal"><span class="contrast-mark" aria-hidden="true">!?</span><div><h3>{{contrastTitle}}</h3><p>{{contrastBody}}</p></div></div>
     </div></section>
 
@@ -96,7 +96,7 @@
       <div class="feature-grid">
         <article class="feature feature-talk reveal"><div class="feature-art"><img src="__BASE__assets/art/enemy-flame-spent.webp" alt="" width="220" height="220" loading="lazy"><span class="mini-bubble">{{heroSpeech}}</span><span class="mini-sparks" aria-hidden="true">! !</span></div><span class="feature-no">01 / REACTION</span><h3>{{feature1Title}}</h3><p>{{feature1Body}}</p></article>
         <article class="feature feature-sketch reveal"><div class="feature-art"><img class="sketch-first" src="__BASE__assets/art/doodle-water.svg" alt="" width="180" height="180" loading="lazy"><span class="redraw-arrow" aria-hidden="true">↝</span><img class="sketch-second" src="__BASE__assets/art/doodle-sponge.svg" alt="" width="180" height="180" loading="lazy"></div><span class="feature-no">02 / REIMAGINE</span><h3>{{feature2Title}}</h3><p>{{feature2Body}}</p></article>
-        <article class="feature feature-heroes reveal"><div class="feature-art companion-pair"><img src="__BASE__assets/art/hero-character.webp" alt="" width="250" height="229" loading="lazy"><img src="__BASE__assets/art/hero-female.webp" alt="" width="250" height="229" loading="lazy"></div><span class="feature-no">03 / TOGETHER</span><h3>{{feature3Title}}</h3><p>{{feature3Body}}</p></article>
+        <article class="feature feature-heroes reveal"><div class="feature-art companion-pair"><img src="__BASE__assets/art/hero-male-large.webp" alt="" width="250" height="229" loading="lazy"><img src="__BASE__assets/art/hero-female-large.webp" alt="" width="250" height="229" loading="lazy"></div><span class="feature-no">03 / TOGETHER</span><h3>{{feature3Title}}</h3><p>{{feature3Body}}</p></article>
       </div>
     </div></section>
 

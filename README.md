@@ -6,7 +6,7 @@ HTML・CSS・JavaScript・画像のみの静的サイトなので、GitHub Pages
 
 ## 内容
 
-- 手描きの水モンスターが炎の守護者を驚かせるキャンペーンビジュアル
+- 勇者と手描きの仲間を大きく描いたHP専用のキャンペーンビジュアル（PC／スマホ・タブレット用の2構図）
 - 勇者が案内する「相手を見る → 工夫を描く → アプリで仲間にする」の遊び方
 - 現行アプリの5エリア・50階の冒険を紹介
 - 本体と同じ128×128のドット描画、同じ16色枠と自由色、太さ1・2・4・8、塗りつぶし、消しゴム、拡大・移動、戻す・やり直す
@@ -25,9 +25,11 @@ HTML・CSS・JavaScript・画像のみの静的サイトなので、GitHub Pages
 - `src/locales/*.json`: 言語別本文（113項目）
 - `src/editorial-overrides.json`: 追加14設定の見出し・用語などの推敲（翻訳の再生成後も維持）
 - `docs/assets/style.css`, `app.js`: デザインとブラウザー内の操作
+- `docs/assets/campaign-v5.css`: 勇者を主役にしたメインビジュアルと、大きなキャラクター配置
 - `docs/assets/pixel-grid.mjs`: 本体の整数描画・四方向塗りつぶしに合わせた128×128ドット処理
 - `docs/assets/art/`: 最適化済み素材
 - `src/ART_DIRECTION.md`: 生成画像の最終プロンプト、保存先、素材の出典
+- `src/CAMPAIGN_ART_V5.md`: 現在のHP専用メイン画像2枚と、視線・腕の姿勢を修正した生成プロンプト
 - `.github/ISSUE_TEMPLATE/`: 既存の受付フォーム
 
 ローカライズ済みHTMLは`docs/`に生成してコミットします。公開物は`docs/`だけです。

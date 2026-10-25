@@ -69,12 +69,12 @@ def main():
             if url.fragment and target in pages:
                 assert unquote(url.fragment) in pages[target].ids, f'{page.path}: broken anchor {ref}'
             links += 1
-    css = docs / 'assets/style.css'
-    for quoted_double, quoted_single, unquoted in re.findall(r'''url\(\s*(?:"([^"]+)"|'([^']+)'|([^\s)]+))\s*\)''', css.read_text()):
-        ref = quoted_double or quoted_single or unquoted
-        if ref.startswith('data:'):
-            continue
-        assert (css.parent / ref).is_file(), f'Missing CSS asset: {ref}'
+    for css in (docs / 'assets').glob('*.css'):
+        for quoted_double, quoted_single, unquoted in re.findall(r'''url\(\s*(?:"([^"]+)"|'([^']+)'|([^\s)]+))\s*\)''', css.read_text()):
+            ref = quoted_double or quoted_single or unquoted
+            if ref.startswith('data:'):
+                continue
+            assert (css.parent / ref).is_file(), f'Missing CSS asset: {ref}'
     assert (docs / '.nojekyll').is_file()
     print(f'PASS: {len(pages)} locales, {len(expected_keys)} strings each, {links} local links, 128×128 canvases, no spoilers, CSS assets and anchors')
 

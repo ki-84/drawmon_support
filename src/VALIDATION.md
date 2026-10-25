@@ -31,3 +31,9 @@ Japanese and English are authored copy. Additional locale drafts use Apple Trans
 - All 16 mobile locale pages stay within the viewport. Japanese hero height is 920 CSS pixels; other settings are 980. The illustration begins at 320/380 CSS pixels, showing a large hero in the first screen.
 - Guide character art is enlarged using 1000×914 source exports. Main campaign captions still identify the visuals as promotional illustrations.
 - No browser warnings/errors during the checked layouts. The generated assets and full prompt set are recorded in `CAMPAIGN_ART_V5.md`.
+
+## Direction and female hand correction
+
+- The female hero beside the native app screenshot is displayed facing left toward the screenshot. The right character in the two-hero feature illustration also faces inward. These are scoped CSS transforms; app screenshots, text and source character assets are unchanged.
+- Desktop campaign image v6 separates the female hero's previously overlapping hands into distinct compact fists. Final artwork and the localized ImageGen prompt are documented in `CAMPAIGN_HAND_REPAIR_V6.md`.
+- The campaign stylesheet URL is versioned to load the corrected direction when existing visitors refresh.

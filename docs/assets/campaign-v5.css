@@ -46,11 +46,11 @@
 .hero-coach > img { width: 330px; max-width: 58%; }
 .hero-coach > div { margin: 0 0 35px -12px; padding: 24px; }
 .hero-coach p:last-child { font-size: 14px; }
-.native-story-copy .native-hero { width: 380px; max-width: 90%; margin-top: 12px; }
+.native-story-copy .native-hero { width: 380px; max-width: 90%; margin-top: 12px; transform: scaleX(-1); }
 .companion-pair { height: 280px; }
 .companion-pair img { width: 73%; bottom: -20%; }
 .companion-pair img:first-child { left: -15%; }
-.companion-pair img:last-child { right: -13%; }
+.companion-pair img:last-child { right: -13%; transform: rotate(7deg) scaleX(-1); }
 @media(max-width:1100px) {
   .hero-inner { padding-top: 165px; }
   .hero .hero-art { object-position: 58% center; }

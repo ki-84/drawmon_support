@@ -1,5 +1,7 @@
 # Drawmon hero campaign artwork — 2026-10-25
 
+The desktop illustration is now superseded by the localized hand repair in [CAMPAIGN_HAND_REPAIR_V6.md](CAMPAIGN_HAND_REPAIR_V6.md). The portrait image and original composition/gaze/anatomy prompt history below remain unchanged.
+
 Created with the built-in ImageGen tool for this website. These are promotional illustrations, not app screenshots. Both final assets preserve the existing hero identities and the opening region's world. No endgame character or hidden reward is shown.
 
 ## Final workspace assets

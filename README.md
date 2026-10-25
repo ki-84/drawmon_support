@@ -30,6 +30,7 @@ HTML・CSS・JavaScript・画像のみの静的サイトなので、GitHub Pages
 - `docs/assets/art/`: 最適化済み素材
 - `src/ART_DIRECTION.md`: 生成画像の最終プロンプト、保存先、素材の出典
 - `src/CAMPAIGN_ART_V5.md`: 現在のHP専用メイン画像2枚と、視線・腕の姿勢を修正した生成プロンプト
+- `src/CAMPAIGN_HAND_REPAIR_V6.md`: PC用メイン画像の女性の手を修正した最新版と生成プロンプト
 - `.github/ISSUE_TEMPLATE/`: 既存の受付フォーム
 
 ローカライズ済みHTMLは`docs/`に生成してコミットします。公開物は`docs/`だけです。

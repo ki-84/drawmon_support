@@ -37,6 +37,7 @@ class Page(HTMLParser):
 
 def main():
     docs = ROOT / 'docs'
+    expected_keys = set(json.loads((ROOT / 'src/base-copy.json').read_text()))
     pages = {}
     for code in LANGUAGES:
         path = docs / ('' if code == 'ja' else code) / 'index.html'
@@ -50,7 +51,9 @@ def main():
         assert all(count == 1 for count in Counter(page.ids).values()), f'{code}: duplicate id'
         match = re.search(r'<script id="page-copy" type="application/json">(.*?)</script>', text, re.S)
         copy = json.loads(match[1])
-        assert len(copy) == 113, f'{code}: incomplete UI copy'
+        assert set(copy) == expected_keys, f'{code}: incomplete UI copy'
+        assert 'width="128" height="128"' in text, f'{code}: incorrect drawing resolution'
+        assert not re.search(r'boss\.webp|白紙の創世竜|bossTitle|bossBody|memory-photo|group picture|集合写真', text), f'{code}: spoiler remains'
         assert not re.search(r'\{\{\w+\}\}|__[A-Z_]+__', text), f'{code}: unresolved token'
         pages[path.resolve()] = page
     links = 0
@@ -73,7 +76,7 @@ def main():
             continue
         assert (css.parent / ref).is_file(), f'Missing CSS asset: {ref}'
     assert (docs / '.nojekyll').is_file()
-    print(f'PASS: {len(pages)} locales, 113 strings each, {links} local links, CSS assets and anchors')
+    print(f'PASS: {len(pages)} locales, {len(expected_keys)} strings each, {links} local links, 128×128 canvases, no spoilers, CSS assets and anchors')
 
 if __name__ == '__main__':
     main()

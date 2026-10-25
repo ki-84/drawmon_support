@@ -7,9 +7,10 @@ HTML・CSS・JavaScript・画像のみの静的サイトなので、GitHub Pages
 ## 内容
 
 - 手描きの水モンスターが炎の守護者を驚かせるキャンペーンビジュアル
-- 水が炎を消す1階／水では止まらない2階の攻略デモと、次の工夫のヒント
-- 現行アプリの5エリア・50階・最終守護者の紹介
-- 端末内だけで描けるスケッチブック（色、消しゴム、元に戻す、消去、PNG保存）
+- 勇者が案内する「相手を見る → 工夫を描く → アプリで仲間にする」の遊び方
+- 現行アプリの5エリア・50階の冒険を紹介
+- 本体と同じ128×128のドット描画、同じ16色枠と自由色、太さ1・2・4・8、塗りつぶし、消しゴム、拡大・移動、戻す・やり直す
+- 保存は1024×1024の透過PNG（128×128を補間なしで8倍）。本体の現行UIを実際に操作して撮影した紹介画像
 - FAQ、既存のGitHub Issues受付（不具合・要望・質問）
 - 16言語・表記の静的ページ、言語切替、canonical、hreflang、サイトマップ
 
@@ -24,6 +25,7 @@ HTML・CSS・JavaScript・画像のみの静的サイトなので、GitHub Pages
 - `src/locales/*.json`: 言語別本文（113項目）
 - `src/editorial-overrides.json`: 追加14設定の見出し・用語などの推敲（翻訳の再生成後も維持）
 - `docs/assets/style.css`, `app.js`: デザインとブラウザー内の操作
+- `docs/assets/pixel-grid.mjs`: 本体の整数描画・四方向塗りつぶしに合わせた128×128ドット処理
 - `docs/assets/art/`: 最適化済み素材
 - `src/ART_DIRECTION.md`: 生成画像の最終プロンプト、保存先、素材の出典
 - `.github/ISSUE_TEMPLATE/`: 既存の受付フォーム
@@ -33,11 +35,12 @@ HTML・CSS・JavaScript・画像のみの静的サイトなので、GitHub Pages
 ```sh
 python3 scripts/build_site.py
 python3 scripts/check_site.py
-node --check docs/assets/app.js
+node --test scripts/pixel-grid.test.mjs
+node --input-type=module --check < docs/assets/app.js
 python3 -m http.server 8173 --directory docs --bind 127.0.0.1
 ```
 
-http://127.0.0.1:8173/ を開きます。`/en/`など各言語の直リンクにも対応します。ビルドにはPython標準ライブラリのみを使い、Node.jsは構文確認時だけ使用します。
+http://127.0.0.1:8173/ を開きます。`/en/`など各言語の直リンクにも対応します。ビルドにはPython標準ライブラリのみを使い、Node.jsはドット描画の検証と構文確認時に使用します。
 
 日本語・英語は`src/base-copy.json`を修正し、各言語を確認してから生成してください。`scripts/translate_site.py`は隣接するDrawmonアプリのMac用`AppleNativeBenchmark`とApple Translationがある開発環境で、追加14設定の翻訳文案を作るための任意ツールです。公開時には使いません。
 
@@ -45,4 +48,4 @@ http://127.0.0.1:8173/ を開きます。`/en/`など各言語の直リンクに
 
 `main`に`docs/`、`src/`、生成・検証スクリプト、公開ワークフローの変更をpushすると、既存のGitHub Actionsが16ページを再生成・検証してGitHub Pagesへ公開します。PagesのSourceは**GitHub Actions**を使用します。
 
-紹介用デモは決まった例のアニメーションです。自由な絵を判定するAIやゲーム本体は含みません。スケッチは送信・自動保存されず、PNG保存ボタンを押したときだけブラウザーから書き出します。
+Web上でできるのはお絵描きとPNG保存です。絵の読み取り・仲間の誕生・戦いはアプリの機能として明記し、決められた絵を選ぶ疑似バトルは掲載しません。絵は送信・自動保存されず、PNG保存ボタンを押したときだけブラウザーから書き出します。

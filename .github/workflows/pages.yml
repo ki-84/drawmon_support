@@ -8,6 +8,7 @@ on:
       - 'src/**'
       - 'scripts/build_site.py'
       - 'scripts/check_site.py'
+      - 'scripts/pixel-grid.test.mjs'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -33,6 +34,10 @@ jobs:
         run: python3 scripts/build_site.py
       - name: Check static site
         run: python3 scripts/check_site.py
+      - name: Check pixel drawing and JavaScript
+        run: |
+          node --test scripts/pixel-grid.test.mjs
+          node --input-type=module --check < docs/assets/app.js
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static site

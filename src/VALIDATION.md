@@ -1,22 +1,25 @@
 # Promotion site validation — 2026-10-25
 
-## Static checks
+## Current behavior
 
-- `python3 scripts/build_site.py`: all 16 locale pages generated.
-- `python3 scripts/check_site.py`: 113 strings per locale; 528 local references; image, stylesheet, script and anchor targets; canonical/hreflang metadata; no duplicate IDs or unresolved placeholders.
-- `node --check docs/assets/app.js` and `git diff --check`: passed.
-- Published folder: approximately 1.6 MB including all locales and artwork. No runtime server or third-party scripts.
+The former disconnected battle choices and freehand notebook have been replaced by a single guided drawing workshop. Characters and text guide visitors from observing an enemy to drawing an idea, then explain that companion creation and battles occur in the app. Male and female hero artwork appears throughout. Hidden story rewards and final-guardian content are omitted from all locale HTML, embedded copy and the published image directory.
 
-## Browser checks
+## Drawing checks
 
-Chrome, local HTTP preview of `docs/`; default desktop viewport and 375×812 mobile viewport.
+- Native source comparison: `Sources/DrawmonCore/PixelGrid.swift`, `DrawingView.swift`, `ZoomDrawingCanvas.swift`, `Theme.swift`.
+- Grid: 128×128. Integer Bresenham lines, square brushes of 1/2/4/8 pixels and four-connected flood fill match the native drawing rules.
+- `node --test scripts/pixel-grid.test.mjs`: exact diagonal rasterization, brush footprints, enclosed fill/diagonal boundary behavior, erasure and custom-color history all pass.
+- Chrome mobile preview: actual pointer input drew a water doodle, filled it cyan and added its face with the palette and pen controls.
+- Downloaded PNG `my-drawmon-1024.png`: 1024×1024; every 8×8 block is identical; shrinking to 128 then enlarging with nearest-neighbor yields exactly the same bytes. Alpha values are only 0 or 255. Colors match the native palette. The transparent background is preserved.
+- Undo, redo, clear, then undo restored exactly the same exported RGBA pixels. Zoom displayed 2.0× with a 200% canvas; hand panning moved the canvas by 58 CSS pixels; fit restored 1.0×. Browser warning/error logs were empty.
 
-- All 16 language selector options navigate to their respective static pages and select the correct language. Mobile document width stays within the viewport.
-- Desktop hero, world gallery, final guardian, feature illustrations and mobile hero/sketchbook inspected visually. Small horizontal ribbon overflow corrected.
-- Water against floor 1: flame disappears, guardian sprite changes to an extinguished startled reaction, dialogue and reason explain the fireball failure.
-- Water against floor 2: water body and water attacks remain; unsuccessful reason displayed.
-- Sponge against both floors: exploratory hints displayed without declaring victory.
-- Sketchbook: pointer drag draws; color selection, eraser, undo and clear work. Empty save displays guidance. PNG export produced `my-drawmon.png`, 720×600, with 2,899 blue pixels from the test stroke. The browser download-event observer did not report the blob download, so the downloaded PNG was verified directly.
-- No browser warning or error logs during the tested interactions. Viewport override reset after mobile checks.
+## Site checks
 
-Japanese and English are authored copy; the other 14 locale drafts use Apple Translation plus explicit headline/terminology edits in `editorial-overrides.json`. Structural checks do not constitute full native-speaker review.
+- All 16 locale pages generated with 113 text entries each.
+- `python3 scripts/check_site.py`: local asset/script/style/anchor targets, canonical/hreflang, unique IDs, resolution attributes, no unresolved placeholders or prohibited spoilers.
+- `node --input-type=module --check < docs/assets/app.js` and `git diff --check`.
+- Default desktop and 375×812 mobile layout visually inspected.
+- Browser language switching verified all 16 settings, each with a 128×128 canvas and a mobile document width within the viewport.
+- New and changed marketing copy translated across all 16 settings; native drawing-tool labels reused from the app's localization data.
+
+Japanese and English are authored copy. Additional locale drafts use Apple Translation with editorial overrides; structural checks do not replace native-speaker review.

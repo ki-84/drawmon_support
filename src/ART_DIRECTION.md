@@ -39,4 +39,6 @@ Genuinely transparent background, no background scene, no ground, no text, no le
 
 ## Other assets
 
-The title, app icon, character, five region backgrounds and three guardian sprites come from the current app resources. `doodle-water.svg` and `doodle-sponge.svg` are original code-authored doodles for this website. The web battle is an authored example, not an AI assessment of visitor drawings. Water extinguishes floor 1; water does not stop floor 2's water body. The sponge is an exploratory hint with no promised win.
+The title, app icon, male and female heroes, five region backgrounds and candle guardian come from the current app resources. `doodle-water.svg` and `doodle-sponge.svg` are original code-authored doodles for this website. The website offers drawing and PNG export; interpretation and battles take place in the app.
+
+`docs/assets/art/app-drawing.webp` is a genuine capture of the current native drawing screen, saved through Device Hub from an isolated UI-test data store on 2026-10-25. The water doodle was drawn by hand using the app's palette, pen widths and fill tool. Source: `Screenshot Drawmon iPhone iOS 27 2026-10-25 at 15.08.21.png`. The only web preparation was proportional resizing and WebP encoding. The UI was not generated or reconstructed in the screenshot.

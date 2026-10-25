@@ -1,115 +1,454 @@
 {
-  "metaTitle": {"ja":"Drawmon — 描いた絵で、勝てる。","en":"Drawmon — Your doodle. Your winning move."},
-  "metaDescription": {"ja":"相手を見て、勝ち方を描こう。手描きのモンスターと50階の塔へ。iPhone・iPad向け、描いて戦うひらめきアドベンチャー。","en":"Meet the enemy. Draw your answer. Take your hand-drawn monster into a 50-floor adventure for iPhone and iPad. Discover how a doodle becomes a winning move."},
-  "skip": {"ja":"本文へ移動","en":"Skip to content"},
-  "navPlay": {"ja":"勝ち方を体験","en":"See how you win"},
-  "navWorld": {"ja":"冒険の世界","en":"The adventure"},
-  "navSupport": {"ja":"サポート","en":"Support"},
-  "language": {"ja":"言語を選択","en":"Choose a language"},
-  "heroKicker": {"ja":"描いて戦う、ひらめきアドベンチャー","en":"A drawing adventure powered by your ideas"},
-  "heroTitle1": {"ja":"描いた絵で、","en":"Your doodle."},
-  "heroTitle2": {"ja":"勝てる。","en":"Your winning move."},
-  "heroLead": {"ja":"水の体で、炎を消す。相手を見て、勝ち方を描こう。きみの落書きが、冒険の仲間になる。","en":"A body made of water can put out a flame. Look at your opponent. Draw your answer. Your doodle becomes your adventure companion."},
-  "tryDemo": {"ja":"勝ち方を体験する","en":"Try a winning idea"},
-  "seeWorld": {"ja":"冒険をのぞく","en":"Explore the world"},
-  "release": {"ja":"開発中 · iPhone / iPad","en":"In development · iPhone / iPad"},
-  "artNote": {"ja":"プロモーション用イラスト","en":"Promotional illustration"},
-  "stamp1": {"ja":"上手さより、","en":"Big ideas."},
-  "stamp2": {"ja":"ひらめき！","en":"Wobbly lines welcome!"},
-  "heroSpeech": {"ja":"うわっ、火が消えた！","en":"Whoa! My flame went out!"},
-  "loopLabel": {"ja":"みる。描く。勝ち方が変わる。","en":"Look. Draw. Change the battle."},
-  "demoEyebrow": {"ja":"まずは、この一戦。","en":"Your first brilliant idea"},
-  "demoTitle1": {"ja":"炎の相手に、","en":"An enemy made of flame."},
-  "demoTitle2": {"ja":"何を描く？","en":"What would you draw?"},
-  "demoIntro": {"ja":"強い剣じゃなくてもいい。水の体を描いたら、その水で炎を消せるかも。相手の「何を止めるか」が、勝ち方になる。","en":"You do not always need a bigger sword. A water body could put out that flame. Finding what makes an opponent tick gives you an idea for your next drawing."},
-  "stepLook": {"ja":"相手をみる","en":"Look at the enemy"},
-  "stepDraw": {"ja":"工夫を描く","en":"Draw your idea"},
-  "stepEffect": {"ja":"効き方を見る","en":"See what happens"},
-  "floorOne": {"ja":"1F · 炎の守護者","en":"1F · The flame guardian"},
-  "floorTwo": {"ja":"2F · 水の守護者","en":"2F · The water guardian"},
-  "chooseIdea": {"ja":"きみの作戦を選ぼう","en":"Choose your idea"},
-  "waterName": {"ja":"水のモンスター","en":"Water doodle"},
-  "waterDetail": {"ja":"水をかけてみる！","en":"Give it a splash!"},
-  "spongeName": {"ja":"スポンジのモンスター","en":"Sponge doodle"},
-  "spongeDetail": {"ja":"水を吸う体なら？","en":"What if its body absorbs water?"},
-  "demoRun": {"ja":"この工夫を試す！","en":"Try this idea!"},
-  "demoReset": {"ja":"もう一度ためす","en":"Try again"},
-  "demoRunning": {"ja":"工夫を届けろ…！","en":"Here comes your idea…!"},
-  "demoInitial": {"ja":"炎をともして待ち構える相手。小さな水の体で挑んでみよう。","en":"The guardian is ready with a burning flame. Send in your little water doodle."},
-  "demoWaterInitial": {"ja":"今度の相手は、水でできた体。同じ工夫が通じるかな？","en":"This time, the opponent is made of water. Will the same idea work?"},
-  "resultWin": {"ja":"ひらめき、届いた！","en":"Your idea worked!"},
-  "resultNo": {"ja":"あれ、効いてない…！","en":"That did not stop it…!"},
-  "resultIdea": {"ja":"次の勝ち方を、描こう。","en":"Draw your next idea."},
-  "flameReason": {"ja":"水で頭の炎が消えた。火の玉を出せなくなって、敵は大あわて！","en":"The water puts out the flame on its head. No flame means no fireballs. The guardian panics!"},
-  "waterReason": {"ja":"水をかけても、水の体は減らない。相手の水の攻撃も止まらなかった。","en":"Adding water does not take away a water body. The opponent can still use its water attack."},
-  "spongeReason": {"ja":"水の体なら、吸いとる工夫はどうだろう？ 相手の特徴から、次の一手を考えよう。","en":"If the enemy is made of water, could an absorbent body help? Let the opponent's features inspire a new approach."},
-  "spongeFlameReason": {"ja":"乾いたスポンジだけで、炎を消せるかな？ まずは水の体で、炎への働きを見てみよう。","en":"Could a dry sponge alone put out a flame? Try the water doodle first and see what it does to the fire."},
-  "enemyReady": {"ja":"この先へは通さないぞ！","en":"You shall not pass!"},
-  "enemyPanic": {"ja":"うわっ、火が消えた！ 火の玉が出せない！","en":"Whoa! My flame went out! I cannot make fireballs!"},
-  "enemyCalm": {"ja":"へっちゃら！ 水を足しても止まらないよ！","en":"No problem! More water will not stop me!"},
-  "enemyThink": {"ja":"その体で、どう来る…？","en":"What will you do with that body…?"},
-  "doodleLabel": {"ja":"きみが描いた仲間","en":"Your hand-drawn companion"},
-  "enemyLabel": {"ja":"塔の守護者","en":"The tower guardian"},
-  "demoCaption": {"ja":"紹介用の攻略例です。アプリでは描かれた特徴と、相手の体・動きから戦いが決まります。スポンジは次の工夫のヒントです。","en":"These are illustrative strategy examples. In the app, battles depend on the features in your drawing and the opponent's body and actions. The sponge is a hint for a new idea."},
-  "contrastTitle": {"ja":"同じ絵が、いつでも正解とは限らない。","en":"One doodle does not solve every battle."},
-  "contrastBody": {"ja":"さっき勝てた水の仲間も、水の敵には苦戦する。相手を観察して、描き直す。その「じゃあ、こうしたら？」が面白い。","en":"Your water companion may beat a flame, then struggle against water. Observe. Redraw. That little moment of “What if I tried this?” is the fun."},
-  "worldEyebrow": {"ja":"50階の向こうに、きみの物語。","en":"Fifty floors. Your own story."},
-  "worldTitle1": {"ja":"落書きから、","en":"From a little sketch"},
-  "worldTitle2": {"ja":"大冒険へ。","en":"to a great adventure."},
-  "worldBody": {"ja":"森の回廊から、水晶の世界、雲の上、星の書庫へ。50体の守護者が待つ白紙の塔を、きみの仲間と登っていこう。","en":"From woodland corridors to crystal halls, gardens above the clouds and a library of stars. Climb the Blank Tower with your companion and meet its 50 guardians."},
-  "region1": {"ja":"芽吹きの回廊","en":"The Sprouting Corridors"},
-  "region2": {"ja":"水晶の記憶","en":"Memories of Crystal"},
-  "region3": {"ja":"雲海の庭","en":"Gardens Above the Clouds"},
-  "region4": {"ja":"残り火の城","en":"The Ember Castle"},
-  "region5": {"ja":"星を綴る書庫","en":"The Library of Stars"},
-  "bossTitle": {"ja":"最後に待つのは、白紙の創世竜ゼロ。","en":"At the top: Zero, the Blank Creation Dragon."},
-  "bossBody": {"ja":"50階にたどり着くころ、きみはどんな仲間を描いているだろう。最後の勝ち方も、きみの手の中に。","en":"What kind of companion will you draw by the time you reach floor 50? The idea for your final battle is still in your hands."},
-  "featuresTitle": {"ja":"一枚の絵から、広がっていく。","en":"A whole adventure from one little drawing."},
-  "feature1Title": {"ja":"描いた仲間が、しゃべりだす。","en":"Your companion finds a voice."},
-  "feature1Body": {"ja":"描かれた特徴から名前や得意技が生まれ、戦いにことばがつく。効いた敵はうろたえ、届かなかった理由もわかる。","en":"Your drawing inspires a name and a special move. Words bring the battle to life: enemies react when an idea works, and you can see why another one did not."},
-  "feature2Title": {"ja":"負けたら、次のひらめき。","en":"A loss can spark your next idea."},
-  "feature2Body": {"ja":"描き直して、もう一戦。生まれた仲間はライブラリに残るから、いろいろな発想を試していこう。","en":"Redraw and try again. Your companions stay in your library, so you can keep exploring different ideas."},
-  "feature3Title": {"ja":"旅の最後に、みんなで一枚。","en":"One picture to remember the journey."},
-  "feature3Body": {"ja":"冒険の終わりには、勇者と描いた仲間たちの集合写真。自分だけの思い出を、好きな場所へシェアしよう。","en":"At the end, gather your hero and hand-drawn companions for a group picture. Choose where to share a memory that is yours."},
-  "drawEyebrow": {"ja":"その「もしも」を、ひと筆。","en":"Give your “what if” a shape."},
-  "drawTitle": {"ja":"次は、何を描く？","en":"What will you draw next?"},
-  "drawBody": {"ja":"へんてこでも、ぐにゃぐにゃでも。それが、きみだけの仲間。この小さなキャンバスで、まずは一体。","en":"Wonky? Wonderful. Wobbly? Even better. That makes it yours. Start with one little companion on this canvas."},
-  "canvasLabel": {"ja":"自由にモンスターを描けるキャンバス","en":"A canvas for drawing your own monster"},
-  "canvasNote": {"ja":"ここではお絵描きを体験できます。自由な絵での戦いはアプリで。絵は送信されません。","en":"This is a drawing canvas. Battles with your own drawing happen in the app. Your sketch is not uploaded."},
-  "clear": {"ja":"まっさらに","en":"Clear"},
-  "undo": {"ja":"ひとつ戻す","en":"Undo"},
-  "save": {"ja":"絵を保存","en":"Save drawing"},
-  "eraser": {"ja":"消しゴム","en":"Eraser"},
-  "pen": {"ja":"ペン","en":"Pen"},
-  "colorBlue": {"ja":"青","en":"Blue"},
-  "colorRed": {"ja":"赤","en":"Red"},
-  "colorYellow": {"ja":"黄","en":"Yellow"},
-  "colorGreen": {"ja":"緑","en":"Green"},
-  "colorInk": {"ja":"黒","en":"Ink"},
-  "saved": {"ja":"絵を保存しました。きみのひらめき、連れていこう！","en":"Drawing saved. Take your idea with you!"},
-  "canvasEmpty": {"ja":"まずは、ひと筆描いてみよう。","en":"Make your first mark!"},
-  "aboutTitle": {"ja":"冒険のまえに。","en":"Before your adventure."},
-  "faq1": {"ja":"どんな端末で遊べますか？","en":"Which devices can play?"},
-  "answer1": {"ja":"iOS／iPadOS 27以降で、Apple Intelligenceと画像入力に対応するiPhone・iPadが必要です。Apple Intelligenceを有効にしてご利用ください。","en":"You need an iPhone or iPad with iOS or iPadOS 27 or later, Apple Intelligence enabled, and a model that supports image input."},
-  "faq2": {"ja":"今すぐダウンロードできますか？","en":"Can I download it now?"},
-  "answer2": {"ja":"現在は開発・配信準備中です。App Storeでの配信開始日は、公開の準備が整い次第お知らせします。","en":"Drawmon is in development and preparing for release. An App Store release date will be announced when it is ready."},
-  "faq3": {"ja":"絵がうまくなくても遊べますか？","en":"Do I have to be good at drawing?"},
-  "answer3": {"ja":"上手さを競うゲームではありません。形や道具、材質など、どんな工夫を描いたかが大切です。相手を見て、いろいろな発想を試してみてください。","en":"This is not a drawing contest. Shapes, tools and materials help communicate your idea. Look at the opponent and experiment."},
-  "faq4": {"ja":"絵や冒険の記録はどこに保存されますか？","en":"Where are drawings and progress saved?"},
-  "answer4": {"ja":"アプリの絵と冒険は端末内に保存します。自動保存と、3つの手動しおりがあります。広告の視聴や購入には通信を使います。","en":"The app saves your drawings and adventure on your device. There is autosave and three manual bookmarks. Ads and purchases use an internet connection."},
-  "faq5": {"ja":"どの言語に対応しますか？","en":"Which languages are supported?"},
-  "answer5": {"ja":"この紹介ページは16の言語・表記に対応しています。アプリの通常選択は日本語・英語。追加14設定は確認用プレビューとして開発を進めています。","en":"This website is available in 16 language and script settings. The app's normal language choices are Japanese and English. Fourteen additional settings are being developed as previews."},
-  "faq6": {"ja":"描き直しや仲間の召喚はどうなっていますか？","en":"How do redrawing and summoning work?"},
-  "answer6": {"ja":"新しく描くことと描き直しは無料です。保存した仲間の召喚には広告視聴を使い、その階では繰り返し挑めます。広告を外す買い切り購入も用意しています。","en":"Creating a drawing and redrawing are free. Watch an ad to summon a saved companion, then retry that floor together. A one-time purchase removes ads."},
-  "supportTitle": {"ja":"困ったときも、ひらめいたときも。","en":"A little help. A new idea."},
-  "supportBody": {"ja":"不具合の報告、ご質問、ゲームへのアイデアはこちらから。","en":"Report a problem, ask a question, or share an idea for the game."},
-  "supportBug": {"ja":"不具合を報告","en":"Report a bug"},
-  "supportIdea": {"ja":"アイデアを送る","en":"Share an idea"},
-  "supportQuestion": {"ja":"質問する","en":"Ask a question"},
-  "supportNote": {"ja":"GitHubアカウントが必要です。投稿内容は公開されます。本名・メールアドレスなどの個人情報は記載しないでください。","en":"A GitHub account is required. Posts are public. Do not include personal information such as your full name or email address."},
-  "supportGuide": {"ja":"不具合の報告には、操作の手順・ゲームのバージョン・端末とOSの情報を添えてください。","en":"For a bug report, include the steps, game version, device and OS version."},
-  "footerLine": {"ja":"その一筆が、世界を変える。","en":"One little line. A whole new world."},
-  "footerNote": {"ja":"開発中の内容です。プロモーション用イラスト・紹介用の演出を含みます。","en":"Features are in development. This page includes promotional illustrations and illustrative demonstrations."},
-  "allIssues": {"ja":"お問い合わせ一覧","en":"Browse support requests"},
-  "top": {"ja":"ページの先頭へ","en":"Back to top"}
+  "metaTitle": {
+    "ja": "Drawmon — 描いた絵で、勝てる。",
+    "en": "Drawmon — Your doodle. Your winning move."
+  },
+  "metaDescription": {
+    "ja": "相手を見て、勝ち方を描こう。手描きのモンスターと50階の塔へ。iPhone・iPad向け、描いて戦うひらめきアドベンチャー。",
+    "en": "Meet the enemy. Draw your answer. Take your hand-drawn monster into a 50-floor adventure for iPhone and iPad. Discover how a doodle becomes a winning move."
+  },
+  "skip": {
+    "ja": "本文へ移動",
+    "en": "Skip to content"
+  },
+  "navPlay": {
+    "ja": "遊び方・描いてみる",
+    "en": "How to play & draw"
+  },
+  "navWorld": {
+    "ja": "冒険の世界",
+    "en": "The adventure"
+  },
+  "navSupport": {
+    "ja": "サポート",
+    "en": "Support"
+  },
+  "language": {
+    "ja": "言語を選択",
+    "en": "Choose a language"
+  },
+  "heroKicker": {
+    "ja": "描いて戦う、ひらめきアドベンチャー",
+    "en": "A drawing adventure powered by your ideas"
+  },
+  "heroTitle1": {
+    "ja": "描いた絵で、",
+    "en": "Your doodle."
+  },
+  "heroTitle2": {
+    "ja": "勝てる。",
+    "en": "Your winning move."
+  },
+  "heroLead": {
+    "ja": "水の体で、炎を消す。相手を見て、勝ち方を描こう。きみの落書きが、冒険の仲間になる。",
+    "en": "A body made of water can put out a flame. Look at your opponent. Draw your answer. Your doodle becomes your adventure companion."
+  },
+  "tryDemo": {
+    "ja": "128×128で描いてみる",
+    "en": "Draw in 128 × 128"
+  },
+  "seeWorld": {
+    "ja": "冒険をのぞく",
+    "en": "Explore the world"
+  },
+  "release": {
+    "ja": "開発中 · iPhone / iPad",
+    "en": "In development · iPhone / iPad"
+  },
+  "artNote": {
+    "ja": "プロモーション用イラスト",
+    "en": "Promotional illustration"
+  },
+  "stamp1": {
+    "ja": "上手さより、",
+    "en": "Big ideas."
+  },
+  "stamp2": {
+    "ja": "ひらめき！",
+    "en": "Wobbly lines welcome!"
+  },
+  "heroSpeech": {
+    "ja": "うわっ、火が消えた！",
+    "en": "Whoa! My flame went out!"
+  },
+  "demoEyebrow": {
+    "ja": "勇者と、はじめの一歩。",
+    "en": "Your first step with the hero"
+  },
+  "demoTitle1": {
+    "ja": "炎を消せる仲間を、",
+    "en": "A companion to put out the flame."
+  },
+  "demoTitle2": {
+    "ja": "きみの手で。",
+    "en": "Draw it your way."
+  },
+  "demoIntro": {
+    "ja": "相手を見る。工夫を描く。アプリで仲間を誕生させる。まずは、本体と同じ128×128のお絵描きをここで試してみよう。",
+    "en": "Look at the enemy. Draw your idea. Bring your companion to life in the app. Start here with the same 128 × 128 drawing grid."
+  },
+  "stepLook": {
+    "ja": "相手をみる",
+    "en": "Look at the enemy"
+  },
+  "stepDraw": {
+    "ja": "工夫を描く",
+    "en": "Draw your idea"
+  },
+  "stepEffect": {
+    "ja": "アプリで仲間に",
+    "en": "Bring it to life in the app"
+  },
+  "floorOne": {
+    "ja": "1F · 炎の守護者",
+    "en": "1F · The flame guardian"
+  },
+  "demoInitial": {
+    "ja": "頭の炎から、火の玉を飛ばすろうそくの守護者。止めるなら、どこをねらう？",
+    "en": "This candle guardian launches fireballs from the flame on its head. What could you draw to stop it?"
+  },
+  "contrastTitle": {
+    "ja": "同じ絵が、いつでも正解とは限らない。",
+    "en": "One doodle does not solve every battle."
+  },
+  "contrastBody": {
+    "ja": "さっき勝てた水の仲間も、水の敵には苦戦する。相手を観察して、描き直す。その「じゃあ、こうしたら？」が面白い。",
+    "en": "Your water companion may beat a flame, then struggle against water. Observe. Redraw. That little moment of “What if I tried this?” is the fun."
+  },
+  "worldEyebrow": {
+    "ja": "50階の向こうに、きみの物語。",
+    "en": "Fifty floors. Your own story."
+  },
+  "worldTitle1": {
+    "ja": "落書きから、",
+    "en": "From a little sketch"
+  },
+  "worldTitle2": {
+    "ja": "大冒険へ。",
+    "en": "to a great adventure."
+  },
+  "worldBody": {
+    "ja": "森の回廊から、水晶の世界、雲の上、星の書庫へ。50体の守護者が待つ白紙の塔を、きみの仲間と登っていこう。",
+    "en": "From woodland corridors to crystal halls, gardens above the clouds and a library of stars. Climb the Blank Tower with your companion and meet its 50 guardians."
+  },
+  "region1": {
+    "ja": "芽吹きの回廊",
+    "en": "The Sprouting Corridors"
+  },
+  "region2": {
+    "ja": "水晶の記憶",
+    "en": "Memories of Crystal"
+  },
+  "region3": {
+    "ja": "雲海の庭",
+    "en": "Gardens Above the Clouds"
+  },
+  "region4": {
+    "ja": "残り火の城",
+    "en": "The Ember Castle"
+  },
+  "region5": {
+    "ja": "星を綴る書庫",
+    "en": "The Library of Stars"
+  },
+  "featuresTitle": {
+    "ja": "一枚の絵から、広がっていく。",
+    "en": "A whole adventure from one little drawing."
+  },
+  "feature1Title": {
+    "ja": "描いた仲間が、しゃべりだす。",
+    "en": "Your companion finds a voice."
+  },
+  "feature1Body": {
+    "ja": "描かれた特徴から名前や得意技が生まれ、戦いにことばがつく。効いた敵はうろたえ、届かなかった理由もわかる。",
+    "en": "Your drawing inspires a name and a special move. Words bring the battle to life: enemies react when an idea works, and you can see why another one did not."
+  },
+  "feature2Title": {
+    "ja": "負けたら、次のひらめき。",
+    "en": "A loss can spark your next idea."
+  },
+  "feature2Body": {
+    "ja": "描き直して、もう一戦。生まれた仲間はライブラリに残るから、いろいろな発想を試していこう。",
+    "en": "Redraw and try again. Your companions stay in your library, so you can keep exploring different ideas."
+  },
+  "feature3Title": {
+    "ja": "勇者が、いちばんの味方。",
+    "en": "The hero is on your side."
+  },
+  "feature3Body": {
+    "ja": "うまくいったら、一緒によろこぶ。負けたら、次の工夫を考える。きみの描いた仲間を、勇者がずっと応援してくれる。",
+    "en": "Celebrate together when an idea works. Think of a new approach when it does not. The hero keeps cheering for the companion you drew."
+  },
+  "drawEyebrow": {
+    "ja": "勇者からのヒント",
+    "en": "A hint from your hero"
+  },
+  "canvasLabel": {
+    "ja": "128×128のお絵描きキャンバス",
+    "en": "128 by 128 pixel drawing canvas"
+  },
+  "canvasNote": {
+    "ja": "ここではお絵描きとPNG保存ができます。絵から仲間を誕生させて戦うのは、アプリで！",
+    "en": "Draw and save a PNG here. Bring your drawing to life and battle alongside it in the app!"
+  },
+  "clear": {
+    "ja": "全部消す",
+    "en": "Delete everything"
+  },
+  "undo": {
+    "ja": "戻す",
+    "en": "Undo"
+  },
+  "save": {
+    "ja": "絵を保存",
+    "en": "Save drawing"
+  },
+  "eraser": {
+    "ja": "消しゴム",
+    "en": "Eraser"
+  },
+  "pen": {
+    "ja": "ペン",
+    "en": "Pen"
+  },
+  "saved": {
+    "ja": "1024×1024のPNGを書き出しました。",
+    "en": "Your 1024 × 1024 PNG has been exported."
+  },
+  "canvasEmpty": {
+    "ja": "まずは、ひと筆描いてみよう。",
+    "en": "Make your first mark!"
+  },
+  "aboutTitle": {
+    "ja": "冒険のまえに。",
+    "en": "Before your adventure."
+  },
+  "faq1": {
+    "ja": "どんな端末で遊べますか？",
+    "en": "Which devices can play?"
+  },
+  "answer1": {
+    "ja": "iOS／iPadOS 27以降で、Apple Intelligenceと画像入力に対応するiPhone・iPadが必要です。Apple Intelligenceを有効にしてご利用ください。",
+    "en": "You need an iPhone or iPad with iOS or iPadOS 27 or later, Apple Intelligence enabled, and a model that supports image input."
+  },
+  "faq2": {
+    "ja": "今すぐダウンロードできますか？",
+    "en": "Can I download it now?"
+  },
+  "answer2": {
+    "ja": "現在は開発・配信準備中です。App Storeでの配信開始日は、公開の準備が整い次第お知らせします。",
+    "en": "Drawmon is in development and preparing for release. An App Store release date will be announced when it is ready."
+  },
+  "faq3": {
+    "ja": "絵がうまくなくても遊べますか？",
+    "en": "Do I have to be good at drawing?"
+  },
+  "answer3": {
+    "ja": "上手さを競うゲームではありません。形や道具、材質など、どんな工夫を描いたかが大切です。相手を見て、いろいろな発想を試してみてください。",
+    "en": "This is not a drawing contest. Shapes, tools and materials help communicate your idea. Look at the opponent and experiment."
+  },
+  "faq4": {
+    "ja": "絵や冒険の記録はどこに保存されますか？",
+    "en": "Where are drawings and progress saved?"
+  },
+  "answer4": {
+    "ja": "アプリの絵と冒険は端末内に保存します。自動保存と、3つの手動しおりがあります。広告の視聴や購入には通信を使います。",
+    "en": "The app saves your drawings and adventure on your device. There is autosave and three manual bookmarks. Ads and purchases use an internet connection."
+  },
+  "faq5": {
+    "ja": "どの言語に対応しますか？",
+    "en": "Which languages are supported?"
+  },
+  "answer5": {
+    "ja": "この紹介ページは16の言語・表記に対応しています。アプリの通常選択は日本語・英語。追加14設定は確認用プレビューとして開発を進めています。",
+    "en": "This website is available in 16 language and script settings. The app's normal language choices are Japanese and English. Fourteen additional settings are being developed as previews."
+  },
+  "faq6": {
+    "ja": "描き直しや仲間の召喚はどうなっていますか？",
+    "en": "How do redrawing and summoning work?"
+  },
+  "answer6": {
+    "ja": "新しく描くことと描き直しは無料です。保存した仲間の召喚には広告視聴を使い、その階では繰り返し挑めます。広告を外す買い切り購入も用意しています。",
+    "en": "Creating a drawing and redrawing are free. Watch an ad to summon a saved companion, then retry that floor together. A one-time purchase removes ads."
+  },
+  "supportTitle": {
+    "ja": "困ったときも、ひらめいたときも。",
+    "en": "A little help. A new idea."
+  },
+  "supportBody": {
+    "ja": "不具合の報告、ご質問、ゲームへのアイデアはこちらから。",
+    "en": "Report a problem, ask a question, or share an idea for the game."
+  },
+  "supportBug": {
+    "ja": "不具合を報告",
+    "en": "Report a bug"
+  },
+  "supportIdea": {
+    "ja": "アイデアを送る",
+    "en": "Share an idea"
+  },
+  "supportQuestion": {
+    "ja": "質問する",
+    "en": "Ask a question"
+  },
+  "supportNote": {
+    "ja": "GitHubアカウントが必要です。投稿内容は公開されます。本名・メールアドレスなどの個人情報は記載しないでください。",
+    "en": "A GitHub account is required. Posts are public. Do not include personal information such as your full name or email address."
+  },
+  "supportGuide": {
+    "ja": "不具合の報告には、操作の手順・ゲームのバージョン・端末とOSの情報を添えてください。",
+    "en": "For a bug report, include the steps, game version, device and OS version."
+  },
+  "footerLine": {
+    "ja": "その一筆が、世界を変える。",
+    "en": "One little line. A whole new world."
+  },
+  "footerNote": {
+    "ja": "開発中の内容です。プロモーション用イラスト・紹介用の演出を含みます。",
+    "en": "Features are in development. This page includes promotional illustrations and illustrative demonstrations."
+  },
+  "allIssues": {
+    "ja": "お問い合わせ一覧",
+    "en": "Browse support requests"
+  },
+  "top": {
+    "ja": "ページの先頭へ",
+    "en": "Back to top"
+  },
+  "heroWelcome": {
+    "ja": "きみの仲間と、一緒に冒険しよう！",
+    "en": "Let’s go on an adventure with your companion!"
+  },
+  "drawPrompt": {
+    "ja": "水の体なら、その炎を消せるかな？ 青いしずくに、顔や手足を描いてみよう。",
+    "en": "Could a body made of water put out that flame? Try a blue droplet with a face, arms or legs."
+  },
+  "editorHelp": {
+    "ja": "描く · ＋／−で拡大 · 手のボタンで移動",
+    "en": "Draw · Zoom with + / − · Use the hand to pan"
+  },
+  "saveSize": {
+    "ja": "PNG保存は1024×1024。128×128のドットを、ぼかさず8倍に拡大します。",
+    "en": "PNG export: 1024 × 1024. Your 128 × 128 pixels are enlarged 8× without blurring."
+  },
+  "nativeTitle": {
+    "ja": "アプリでは、描いた絵が仲間に。",
+    "en": "In the app, your drawing becomes a companion."
+  },
+  "nativeBody": {
+    "ja": "「仲間を誕生させる」を押すと、絵から名前や得意技が生まれる。勇者の応援を受けて、きみの工夫で戦いに挑もう。",
+    "en": "Tap “Bring your companion to life” in the app to discover its name and special move. With the hero cheering you on, take your idea into battle."
+  },
+  "actualScreen": {
+    "ja": "開発中のアプリ画面（日本語版）",
+    "en": "Development app screen (Japanese version)"
+  },
+  "canvasTitle": {
+    "ja": "お絵描きキャンバス",
+    "en": "Drawing canvas"
+  },
+  "zoomOut": {
+    "ja": "縮小",
+    "en": "Zoom out"
+  },
+  "zoomIn": {
+    "ja": "拡大",
+    "en": "Zoom in"
+  },
+  "zoomFit": {
+    "ja": "全体",
+    "en": "Whole canvas"
+  },
+  "moveCanvas": {
+    "ja": "キャンバスを移動",
+    "en": "Move canvas"
+  },
+  "redo": {
+    "ja": "やり直す",
+    "en": "Redo"
+  },
+  "fill": {
+    "ja": "塗りつぶし",
+    "en": "Fill"
+  },
+  "thin": {
+    "ja": "細い",
+    "en": "Thin"
+  },
+  "normal": {
+    "ja": "ふつう",
+    "en": "Medium"
+  },
+  "thick": {
+    "ja": "太い",
+    "en": "Thick"
+  },
+  "extraThick": {
+    "ja": "極太",
+    "en": "Extra thick"
+  },
+  "customColor": {
+    "ja": "自由な色を選ぶ",
+    "en": "Choose a Custom Color"
+  },
+  "color0": {
+    "ja": "夜色",
+    "en": "Midnight"
+  },
+  "color1": {
+    "ja": "白",
+    "en": "White"
+  },
+  "color2": {
+    "ja": "銀",
+    "en": "Silver"
+  },
+  "color3": {
+    "ja": "灰",
+    "en": "Gray"
+  },
+  "color4": {
+    "ja": "赤",
+    "en": "Red"
+  },
+  "color5": {
+    "ja": "橙",
+    "en": "Orange"
+  },
+  "color6": {
+    "ja": "黄",
+    "en": "Yellow"
+  },
+  "color7": {
+    "ja": "黄緑",
+    "en": "Lime Green"
+  },
+  "color8": {
+    "ja": "緑",
+    "en": "Green"
+  },
+  "color9": {
+    "ja": "水色",
+    "en": "Light Blue"
+  },
+  "color10": {
+    "ja": "青",
+    "en": "Blue"
+  },
+  "color11": {
+    "ja": "藍",
+    "en": "Indigo"
+  },
+  "color12": {
+    "ja": "紫",
+    "en": "Purple"
+  },
+  "color13": {
+    "ja": "桃",
+    "en": "Pink"
+  },
+  "color14": {
+    "ja": "茶",
+    "en": "Brown"
+  }
 }

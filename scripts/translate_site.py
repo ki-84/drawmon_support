@@ -18,10 +18,12 @@ def write(path,data):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--languages',default=','.join(LANGUAGES[2:]))
+    parser.add_argument('--keys', help='Comma-separated changed keys; merge only these translations')
     args=parser.parse_args()
     base=json.loads((ROOT/'src/base-copy.json').read_text())
     for locale in ['ja','en']:write(ROOT/f'src/locales/{locale}.json',{k:v[locale] for k,v in base.items()})
-    keys=list(base);values=[base[k]['en'] for k in keys]
+    keys=args.keys.split(',') if args.keys else list(base)
+    values=[base[k]['en'] for k in keys]
     revision=hashlib.sha256(json.dumps(values).encode()).hexdigest()[:12]
     binary=APP/'.build/apple-mac/Build/Products/Debug/AppleNativeBenchmark'
     def translate(locale):
@@ -34,7 +36,9 @@ def main():
                 subprocess.run([str(binary),str(APP/'Drawmon/Resources'),str(folder),'--translate-texts',str(folder/'input.json'),'--language',locale,'--source-language','en'],stdout=log,stderr=subprocess.STDOUT,check=True)
         result=json.loads(output.read_text())
         if len(result)!=len(keys) or any(not isinstance(value,str) or not value.strip() for value in result):raise ValueError(f'Invalid translation batch: {locale}')
-        write(target,dict(zip(keys,result)))
+        existing=json.loads(target.read_text()) if args.keys and target.exists() else {}
+        existing.update(dict(zip(keys,result)))
+        write(target,{key:existing[key] for key in base})
         print(f'{locale}: {len(result)} entries',flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
         for result in pool.map(translate,args.languages.split(',')):pass
